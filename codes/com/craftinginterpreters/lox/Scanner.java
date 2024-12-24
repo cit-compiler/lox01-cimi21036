@@ -98,7 +98,7 @@ class Scanner {
         line++;
         break;  
 
-      case '"': string(); break;  
+      case '\"': string(); break;  
 
       case 'o':
         if (match('r')) {
@@ -148,7 +148,7 @@ class Scanner {
   }
 
    private void string() {
-    while (peek() != '"' && !isAtEnd()) {
+    while (peek() != '\"' && !isAtEnd()) {
       if (peek() == '\n') line++;
       advance();
     }
